@@ -1,24 +1,19 @@
 {
-    "homepage": "https://gradle.org",
-    "version": "5.0",
-    "license": "Apache-2.0",
-    "hash": "17847c8e12b2bcfce26a79f425f082c31d4ded822f99a66127eee2d96bf18216",
-    "url": "https://services.gradle.org/distributions/gradle-5.0-all.zip",
-    "extract_dir": "gradle-5.0",
-    "bin": "bin\\gradle.bat",
-    "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
+    "homepage": "https://jenkins-x.io/",
+    "version": "1.3.653",
+    "url": "https://github.com/jenkins-x/jx/releases/download/v1.3.653/jx-windows-amd64.zip",
+	"hash": "c961156e36f8f8184ad2922daa79c6319100aad4053ee772db82b886bb18dfc8",
+    "extract_dir": "jenkins-x",
+    "bin": [
+	    [
+	        "jx-windows-amd64.exe",
+            "jx",
+			""
         ]
-    },
-    "checkver": {
-        "url": "https://gradle.org/install/",
-        "re": "The current Gradle release is version ([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://services.gradle.org/distributions/gradle-$version-all.zip",
-        "extract_dir": "gradle-$version",
+	],
+	"autoupdate": {
+        "url": "https://github.com/jenkins-x/jx/releases/download/v$version/jx-windows-amd64.zip",
+        "extract_dir": "jx-$version",
         "hash": {
             "url": "$url.sha256"
         }
